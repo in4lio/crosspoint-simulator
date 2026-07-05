@@ -39,6 +39,9 @@ public:
   bool ensureDirectoryExists(const char *path);
 
   HalFile open(const char *path, const oflag_t oflag = O_RDONLY);
+  void installDateTimeCallback(const uint8_t *clockUtcOffsetQ) {
+    (void)clockUtcOffsetQ;
+  }
   bool mkdir(const char *path, const bool pFlag = true);
   bool exists(const char *path);
   bool remove(const char *path);
